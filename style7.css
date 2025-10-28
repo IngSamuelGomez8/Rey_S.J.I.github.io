@@ -1,0 +1,66 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('Image_Gaming/gaming.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Contenedor central del video (pantalla completa centrada) */
+.video-overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 24px;
+  background-color: rgba(0,0,0,0.55); /* ligero dark overlay para contraste */
+}
+
+/* Caja que contiene el video y el botón */
+.video-container{
+  width: 90%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+/* Estilos del video */
+#local-video{
+  width: 100%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+  background-color: black;
+}
+
+/* Botón CERRAR */
+.cerrar-boton{
+  margin-top: 16px;
+}
+
+.cerrar{
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: #3399ff;
+  color: #fff;
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.cerrar:hover{
+  transform: scale(1.03);
+  background-color: #1e7cd6;
+}
+
+/* Responsive */
+@media (max-width: 640px){
+  .video-container { width: 100%; }
+  .cerrar { padding: 10px 18px; font-size: 14px; }
+}
