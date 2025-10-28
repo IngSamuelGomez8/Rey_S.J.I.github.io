@@ -59,7 +59,7 @@ body {
     text-align: center;
     margin-top: 50px;
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.35); /* Fondo transparente */
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 20px;
     width: 80%;
     margin-left: auto;
@@ -96,7 +96,7 @@ body {
 .seccion {
     margin: 60px auto;
     padding: 40px 20px;
-    background-color: rgba(0, 0, 0, 0.35); /* Fondo transparente */
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 20px;
     width: 80%;
     text-align: center;
@@ -177,17 +177,31 @@ body {
     overflow-y: hidden; 
     cursor: grab; 
     scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 15px 10px;
 }
 .slider-container::-webkit-scrollbar { height: 12px; }
 .slider-container::-webkit-scrollbar-thumb { background: #00d4ff; border-radius: 6px; }
-.slider-track { display: flex; gap: 25px; justify-content: center; flex-wrap: nowrap; }
+.slider-container::-webkit-scrollbar-track { background: rgba(255,255,255,0.2); }
+
+.slider-track { 
+    display: flex; 
+    gap: 25px; 
+    flex-wrap: nowrap; 
+    justify-content: flex-start; /* ✅ cambio importante */
+}
+
+.slider-track a {
+    flex: 0 0 auto;
+}
 
 .slider-track img { 
-    width: 200px; 
+    width: 220px; 
     height: auto; 
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0,0,0,0.6); 
     transition: transform 0.3s ease; 
+    flex-shrink: 0; /* ✅ evita que se aplasten */
 }
 .slider-track img:hover {
     transform: scale(1.07);
