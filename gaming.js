@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cerrarBtn = document.getElementById("cerrar-video");
 
     // destinos
-    const destinoVideo = "https://emulatorgames.onl/nds-pro-evolution-soccer-6";       // al terminar el video
+    const destinoVideo = "https://emulatorgames.onl/soccer";       // al terminar el video
     const destinoCerrar = "../Inicios/index.html";       // al presionar cerrar
 
     // mostrar el overlay con el video automáticamente
@@ -36,3 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
